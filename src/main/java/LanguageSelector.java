@@ -12,7 +12,7 @@ public class LanguageSelector extends JFrame {
     private final JLabel lastnameLabel;
     private final JLabel emailLabel;
     private final JTextField nameField;
-    private final JTextField ageField;
+    private final JTextField lastnameField;
     private final JTextField emailField;
     private final JButton saveButton;
 
@@ -32,12 +32,12 @@ public class LanguageSelector extends JFrame {
         lastnameLabel = new JLabel();
         emailLabel = new JLabel();
         nameField = new JTextField();
-        ageField = new JTextField();
+        lastnameField = new JTextField();
         emailField = new JTextField();
         saveButton = new JButton();
 
         saveButton.addActionListener(e -> {
-                addEmployees = new AddEmployees(languageCode, nameField.getText(), lastnameLabel.getText(), emailField.getText());
+                addEmployees = new AddEmployees(languageCode, nameField.getText(), lastnameField.getText(), emailField.getText());
                 addEmployees.AddEmployee();
                 System.out.println("Employee data saved successfully.");
         });
@@ -47,7 +47,7 @@ public class LanguageSelector extends JFrame {
         add(nameLabel);
         add(nameField);
         add(lastnameLabel);
-        add(ageField);
+        add(lastnameField);
         add(emailLabel);
         add(emailField);
         add(new JLabel());
